@@ -12,24 +12,35 @@ function makeStudentsReport(data) {
 // console.log(makeStudentsReport(testData));
 
 
-const enrollInSummerSchool = function(students){
-  return students.map((student)=>{
-     student.status = 'In Summer School';
-     return student;
+const enrollInSummerSchool = function(students) {
+  return students.map((student) => {
+    student.status = 'In Summer School';
+    return student;
   });
-}
+};
 
-const testData = [
-  {
-    name: 'Tim',
-    status: 'In Summer school',
-    course: 'Biology'
-  },
-  {
-    name: 'Sue',
-    status: 'In Summer school',
-    course: 'Mathematics'
-  },
+// const testData = [{
+//     name: 'Tim',
+//     status: 'In Summer school',
+//     course: 'Biology'
+//   },
+//   {
+//     name: 'Sue',
+//     status: 'In Summer school',
+//     course: 'Mathematics'
+//   },
+// ];
+
+// console.log(enrollInSummerSchool(testData));
+
+const scratchData = [
+  { id: 22, foo: 'bar' },
+  { id: 28, foo: 'bizz' },
+  { id: 19, foo: 'bazz' },
 ];
 
-console.log(enrollInSummerSchool(testData));
+function findById(items, idNum) {
+  return items.find(obj => obj.id === idNum);
+}
+
+// console.log(findById(scratchData, 22));
