@@ -4,12 +4,7 @@ function makeStudentsReport(data) {
     return `${student.name}: ${student.grade}`;
   });
 }
-// const testData = [
-//   { name: 'Jane Doe', grade: 'A' },
-//   { name: 'John Dough', grade: 'B' },
-//   { name: 'Jill Do', grade: 'A' },
-// ];
-// console.log(makeStudentsReport(testData));
+
 
 
 const enrollInSummerSchool = function(students) {
@@ -19,19 +14,7 @@ const enrollInSummerSchool = function(students) {
   });
 };
 
-// const testData = [{
-//     name: 'Tim',
-//     status: 'In Summer school',
-//     course: 'Biology'
-//   },
-//   {
-//     name: 'Sue',
-//     status: 'In Summer school',
-//     course: 'Mathematics'
-//   },
-// ];
 
-// console.log(enrollInSummerSchool(testData));
 
 const scratchData = [
   { id: 22, foo: 'bar' },
@@ -44,3 +27,21 @@ function findById(items, idNum) {
 }
 
 // console.log(findById(scratchData, 22));
+const validateKeys = function(obj, expectedKeys){
+  const keys = Object.keys(obj);
+  for(let key of keys){
+    if(!expectedKeys.includes(key)){
+      return false;
+    }
+  }
+  return true;
+}
+const objectA = {
+  id: 2,
+  name: 'Jane Doe',
+  age: 34,
+  city: 'Chicago',
+};
+
+const expected = ['id', 'name', 'age', 'city'];
+console.log(validateKeys(objectA, expected));
