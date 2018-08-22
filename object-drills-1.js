@@ -36,4 +36,4 @@ const keyDeleter = function(obj){
   delete obj.foo;
   delete obj.bar;
   return obj;
-}
+};
