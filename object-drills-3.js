@@ -26,3 +26,21 @@ let meals = {
 };
 
 // console.log(meals.meals[3]);
+
+let Person = function(name, jobTitle){
+  this.name = name;
+  this.jobTitle = jobTitle;
+}
+let arr = [];
+let Tim = new Person('Tim', 'engineer');
+arr.push(Tim);
+let Mark = new Person('Mark', 'Chef');
+arr.push(Mark);
+let Susan = new Person('Susan', 'Accountant');
+arr.push(Susan);
+
+for(let human of arr){
+  console.log(`name: ${human.name} job title: ${human.jobTitle}`);
+}
+
+///////////////////////////////////////////////
