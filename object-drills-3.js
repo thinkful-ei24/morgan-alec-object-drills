@@ -34,18 +34,19 @@ let Person = function(name, jobTitle, boss = false){
 };
 
 let arr = [];
-let Tim = new Person('Tim', 'engineer', 'Jeffrey');
-arr.push(Tim);
-let Mark = new Person('Mark', 'Chef', 'Samantha');
-arr.push(Mark);
-let Susan = new Person('Susan', 'Accountant', 'Dwight');
 let Jim = new Person('Jim', 'Founder');
-arr.push(Susan);
 arr.push(Jim);
+let Tim = new Person('Tim', 'engineer', Jim);
+arr.push(Tim);
+let Mark = new Person('Mark', 'Chef', Jim);
+arr.push(Mark);
+let Susan = new Person('Susan', 'Accountant', Jim);
+arr.push(Susan);
+
 
 
 for(let human of arr){
-    console.log(`${human.jobTitle} ${human.name} ${human.boss ? `reports to ${human.boss}` : 'doesn\'t report to anybody'}.`);
+    console.log(`${human.jobTitle} ${human.name} ${human.boss ? `reports to ${human.boss.name}` : 'doesn\'t report to anybody'}.`);
 }
 
 ///////////////////////////////////////////////
