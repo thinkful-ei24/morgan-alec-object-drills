@@ -10,3 +10,26 @@ function makeStudentsReport(data) {
 //   { name: 'Jill Do', grade: 'A' },
 // ];
 // console.log(makeStudentsReport(testData));
+
+
+const enrollInSummerSchool = function(students){
+  return students.map((student)=>{
+     student.status = 'In Summer School';
+     return student;
+  });
+}
+
+const testData = [
+  {
+    name: 'Tim',
+    status: 'In Summer school',
+    course: 'Biology'
+  },
+  {
+    name: 'Sue',
+    status: 'In Summer school',
+    course: 'Mathematics'
+  },
+];
+
+console.log(enrollInSummerSchool(testData));
