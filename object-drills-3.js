@@ -27,20 +27,25 @@ let meals = {
 
 // console.log(meals.meals[3]);
 
-let Person = function(name, jobTitle){
+let Person = function(name, jobTitle, boss = false){
   this.name = name;
   this.jobTitle = jobTitle;
-}
+  this.boss = boss;
+};
+
 let arr = [];
-let Tim = new Person('Tim', 'engineer');
+let Tim = new Person('Tim', 'engineer', 'Jeffrey');
 arr.push(Tim);
-let Mark = new Person('Mark', 'Chef');
+let Mark = new Person('Mark', 'Chef', 'Samantha');
 arr.push(Mark);
-let Susan = new Person('Susan', 'Accountant');
+let Susan = new Person('Susan', 'Accountant', 'Dwight');
+let Jim = new Person('Jim', 'Founder');
 arr.push(Susan);
+arr.push(Jim);
+
 
 for(let human of arr){
-  console.log(`name: ${human.name} job title: ${human.jobTitle}`);
+    console.log(`${human.jobTitle} ${human.name} ${human.boss ? `reports to ${human.boss}` : 'doesn\'t report to anybody'}.`);
 }
 
 ///////////////////////////////////////////////
