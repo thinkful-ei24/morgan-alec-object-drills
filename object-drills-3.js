@@ -182,14 +182,12 @@ const HEROES = [
 ];
 
 const findOne = function(arr, query){
-  arr.find((hero)=> {
-     for(let key in query){
-       console.log('this is the value ' + hero[key]);
-       if(hero[key] === ){
-         return true;
-       }
+  return arr.find((hero)=> {
+     for(const key in query){
+       if(hero[key] === query[key]) return true;
+       else return false;
      }
   });
-}
+};
 
-console.log(findOne(HEROES, {id: 1}));
+// console.log(findOne(HEROES, {id: 1}).name);
