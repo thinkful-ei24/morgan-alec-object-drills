@@ -16,6 +16,13 @@ obj.lastName = 'aLastName';
 obj.job = 'aJob';
 obj.car = 'aCar';
 
-for(let item in obj){
-  console.log(item);
-}
+// for(let item in obj){
+//   console.log(item);
+// }
+
+
+let meals = {
+  meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
+};
+
+// console.log(meals.meals[3]);
