@@ -9,3 +9,13 @@ const loaf = {
 // console.log(loaf.flour);
 // console.log(loaf.water);
 // console.log(loaf.hydration()); // 70
+
+let obj = {};
+obj.firstName = 'aFirstName';
+obj.lastName = 'aLastName';
+obj.job = 'aJob';
+obj.car = 'aCar';
+
+for(let item in obj){
+  console.log(item);
+}
