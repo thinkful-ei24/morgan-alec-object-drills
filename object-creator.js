@@ -31,3 +31,9 @@ function personMaker() {
 let person = personMaker();
 
 console.log(person.fullName());
+
+const keyDeleter = function(obj){
+  delete obj.foo;
+  delete obj.bar;
+  return obj;
+}
