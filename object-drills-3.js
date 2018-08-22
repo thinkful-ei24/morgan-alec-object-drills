@@ -160,7 +160,7 @@ let characterAttributes = [
     race: 'Elf',
     origin: 'Woodland Realm',
     attack: 8,
-    defense: 5 
+    defense: 5
   }
 ];
 
@@ -169,3 +169,27 @@ let characters = characterAttributes
 
 // console.log(characters[0].evaluateFight(characters[2]));
 // console.log(characters[2].evaluateFight(characters[4]));
+
+
+const HEROES = [
+  { id: 1, name: 'Captain America', squad: 'Avengers' },
+  { id: 2, name: 'Iron Man', squad: 'Avengers' },
+  { id: 3, name: 'Spiderman', squad: 'Avengers' },
+  { id: 4, name: 'Superman', squad: 'Justice League' },
+  { id: 5, name: 'Wonder Woman', squad: 'Justice League' },
+  { id: 6, name: 'Aquaman', squad: 'Justice League' },
+  { id: 7, name: 'Hulk', squad: 'Avengers' },
+];
+
+const findOne = function(arr, query){
+  arr.find((hero)=> {
+     for(let key in query){
+       console.log('this is the value ' + hero[key]);
+       if(hero[key] === ){
+         return true;
+       }
+     }
+  });
+}
+
+console.log(findOne(HEROES, {id: 1}));
